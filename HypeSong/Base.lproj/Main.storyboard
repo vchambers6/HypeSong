@@ -249,14 +249,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cdW-WB-MP7">
-                                <rect key="frame" x="180" y="730" width="54" height="63"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S9j-po-D9C">
+                                <rect key="frame" x="314" y="760" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Preview"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S9j-po-D9C">
-                                <rect key="frame" x="297" y="746" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="suit.heart" catalog="system"/>
                                 <connections>
                                     <action selector="didFavorite:" destination="xSY-mv-zRH" eventType="touchUpInside" id="rEj-ao-ReE"/>
                                 </connections>
@@ -268,6 +264,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e7y-s7-1mZ">
+                                <rect key="frame" x="276" y="759" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="play.circle.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="playPreview:" destination="xSY-mv-zRH" eventType="touchUpInside" id="FHa-TC-hIS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="zVk-sF-HeL"/>
@@ -275,6 +279,7 @@
                     <connections>
                         <outlet property="artistLabel" destination="IOr-aB-org" id="WkO-dS-FdO"/>
                         <outlet property="favButton" destination="S9j-po-D9C" id="9hq-t0-WcH"/>
+                        <outlet property="previewButton" destination="e7y-s7-1mZ" id="We8-qb-VVI"/>
                         <outlet property="trackDetails" destination="Xbm-1e-sxx" id="fHg-YR-tef"/>
                         <outlet property="trackImage" destination="on8-lw-GLD" id="JfZ-4F-XI7"/>
                         <outlet property="trackTitle" destination="9fh-bU-DxS" id="aZ0-Nf-7Xs"/>
@@ -441,11 +446,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lDU-1x-UDy">
-                                <rect key="frame" x="180" y="730" width="54" height="63"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Preview"/>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Artist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="Lfe-mI-9jJ">
                                 <rect key="frame" x="47" y="565" width="145" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -453,12 +453,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lDU-1x-UDy">
+                                <rect key="frame" x="271" y="761" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="play.circle.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="playPreview:" destination="WEO-Ei-yv0" eventType="touchUpInside" id="Nyw-gO-qZY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="TVr-9O-iSk"/>
                     </view>
                     <connections>
                         <outlet property="artistLabel" destination="Lfe-mI-9jJ" id="mN9-BF-bSw"/>
+                        <outlet property="previewButton" destination="lDU-1x-UDy" id="pbh-bs-5fR"/>
                         <outlet property="trackDetails" destination="OAg-VH-qwO" id="htH-GS-QPU"/>
                         <outlet property="trackImage" destination="p3p-gx-lAe" id="hH6-z6-RY1"/>
                         <outlet property="trackTitle" destination="nzf-ot-3ym" id="280-44-cle"/>
@@ -469,4 +478,8 @@
             <point key="canvasLocation" x="4473.913043478261" y="1622.5446428571429"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="play.circle.fill" catalog="system" width="64" height="60"/>
+        <image name="suit.heart" catalog="system" width="64" height="54"/>
+    </resources>
 </document>

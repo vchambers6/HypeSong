@@ -17,8 +17,9 @@ class Song {
     var tempo: Float
     var imgUrl: String
     var popularity: Int
+    var previewURL: String?
 
-    init(id: String, title: String, artist: String, danceability: Float, energy: Float, tempo: Float, imgUrl: String, popularity: Int) {
+    init(id: String, title: String, artist: String, danceability: Float, energy: Float, tempo: Float, imgUrl: String, popularity: Int, previewURL: String?) {
         self.id = id
         self.title = title
         self.artist = artist
@@ -27,6 +28,7 @@ class Song {
         self.tempo = tempo
         self.imgUrl = imgUrl
         self.popularity = popularity
+        self.previewURL = previewURL
         
         let url = URL(string: imgUrl)
         if let data = try? Data(contentsOf: url!) {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D0068E82574E2A700E93963 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D0068E72574E2A700E93963 /* AVFoundation.framework */; };
 		3D5C6232256AE08B00DEB79F /* SongDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5C6231256AE08A00DEB79F /* SongDetailViewController.swift */; };
 		3D5C6234256AE61900DEB79F /* SpotifyPlaylist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5C6233256AE61900DEB79F /* SpotifyPlaylist.swift */; };
 		3D5C6240256B0EAA00DEB79F /* TrackDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5C623F256B0EAA00DEB79F /* TrackDetails.swift */; };
@@ -46,6 +47,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3D0068E72574E2A700E93963 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		3D5C6231256AE08A00DEB79F /* SongDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongDetailViewController.swift; sourceTree = "<group>"; };
 		3D5C6233256AE61900DEB79F /* SpotifyPlaylist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyPlaylist.swift; sourceTree = "<group>"; };
 		3D5C623F256B0EAA00DEB79F /* TrackDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDetails.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D0068E82574E2A700E93963 /* AVFoundation.framework in Frameworks */,
 				3D6C4429256ABD1400E54A28 /* SQLite in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -87,6 +90,7 @@
 		3D6C442E256AD8F400E54A28 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3D0068E72574E2A700E93963 /* AVFoundation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -381,6 +385,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7Y78ZPVMJT;
 				INFOPLIST_FILE = HypeSong/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -400,6 +405,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7Y78ZPVMJT;
 				INFOPLIST_FILE = HypeSong/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
