@@ -22,6 +22,7 @@ class Database {
     static let tempo = Expression<Double>("tempo")
     static let imgURL = Expression<String>("imgURL")
     static let popularity = Expression<Int>("popularity")
+    static let previewURL = Expression<String>("previewURL")
     
     static func initFavoritesDirectory() {
         do {
@@ -47,6 +48,7 @@ class Database {
             table.column(self.tempo)
             table.column(self.imgURL)
             table.column(self.popularity)
+            table.column(self.previewURL)
         }
         do {
             try self.database.run(create)
@@ -60,7 +62,7 @@ class Database {
         let query = favoritesTable.filter(spotifyID == item.id)
         
         if (try! database.pluck(query)) == nil {
-            let insert = self.favoritesTable.insert(spotifyID <- item.id, title <- item.title, danceability <- Double(item.danceability), artist <- item.artist, energy <- Double(item.energy), tempo <- Double(item.tempo), imgURL <- item.imgUrl, popularity <- item.popularity)
+            let insert = self.favoritesTable.insert(spotifyID <- item.id, title <- item.title, danceability <- Double(item.danceability), artist <- item.artist, energy <- Double(item.energy), tempo <- Double(item.tempo), imgURL <- item.imgUrl, popularity <- item.popularity, previewURL <- item.previewURL ?? "")
             try? self.database.run(insert)
         }
     }
@@ -75,7 +77,7 @@ class Database {
         var songs = [Song]()
         
         for song in try! database.prepare(favoritesTable) {
-            let songObject = Song(id: song[spotifyID], title: song[title], artist: song[artist], danceability: Float(song[danceability]), energy: Float(song[energy]), tempo: Float(song[tempo]), imgUrl: song[imgURL], popularity: song[popularity])
+            let songObject = Song(id: song[spotifyID], title: song[title], artist: song[artist], danceability: Float(song[danceability]), energy: Float(song[energy]), tempo: Float(song[tempo]), imgUrl: song[imgURL], popularity: song[popularity], previewURL: song[previewURL])
             songs.append(songObject)
         }
         return songs
