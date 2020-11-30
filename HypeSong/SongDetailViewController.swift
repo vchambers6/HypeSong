@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class SongDetailViewController: UIViewController {
     @IBOutlet var trackImage: UIImageView!
@@ -14,12 +15,14 @@ class SongDetailViewController: UIViewController {
     @IBOutlet var artistLabel: UILabel!
     @IBOutlet var favButton: UIButton?
     @IBOutlet var trackDetails: UILabel!
+    @IBOutlet var previewButton: UIButton!
     
     var selectedButton: Bool! {
         didSet {
             favButton?.isSelected = selectedButton
         }
     }
+    var player = AVAudioPlayer()
     
     var track: Song!
     var indexPath: IndexPath!
@@ -46,6 +49,11 @@ class SongDetailViewController: UIViewController {
             let energy = track.energy
             trackDetails.text = "Song Details: \nDanceability: \(danceability) \nTempo: \(tempo) \nEnergy: \(energy)"
             
+            if track.previewURL == "" || track.previewURL == nil {
+                previewButton.isEnabled = false
+                previewButton.isHidden = true
+            }
+            
             
         } else {
             trackImage.image = nil
@@ -56,6 +64,34 @@ class SongDetailViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func playPreview(_ sender: UIButton) {
+        if player.isPlaying {
+            player.stop()
+            return
+        }
+        if let previewURL = track.previewURL {
+            if let url = URL(string: previewURL) {
+                let downloadTask = URLSession.shared.downloadTask(with: url, completionHandler: {
+                    customURL, response, error in
+                    
+                    self.play(url: customURL!)
+
+                })
+                downloadTask.resume()
+            }
+        }
+    }
+    
+    func play(url: URL) {
+        do {
+            player = try AVAudioPlayer(contentsOf: url)
+            player.prepareToPlay()
+            player.play()
+
+        } catch{
+            print(error)
+        }
+    }
     
     @IBAction func didFavorite(_ sender: UIButton) {
         let isSelected = favoritedTracks.favoritesList[indexPath] ?? false
@@ -96,6 +132,9 @@ class SongDetailViewController: UIViewController {
 }
 
 class FavoritesDetailController: SongDetailViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
     override func didFavorite(_ sender: UIButton) {
         return
     }
