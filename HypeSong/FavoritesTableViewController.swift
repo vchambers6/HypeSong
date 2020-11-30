@@ -16,6 +16,7 @@ class FavoritesTableViewController: SongListViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        title = "Favorites"
         self.fetchData()
     }
     override func viewDidLoad() {

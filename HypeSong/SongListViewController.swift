@@ -19,6 +19,8 @@ class SongListViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Results"
+        
         print("Number of tracks in table: \(tracks?.count)")
 
         // Do any additional setup after loading the view.
