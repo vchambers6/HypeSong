@@ -23,6 +23,7 @@ struct Track: Codable {
     var popularity: Int
     var artists: [Artist]
     var album: Album
+    var preview_url: String?
     
 }
 struct Artist: Codable {
@@ -228,7 +229,7 @@ class JSONParser {
         // zips the tracks and audio features into one song object
         for (track, features) in zip(tracksList, audioFeaturesList) {
             if track.id == features.id {
-                let song = Song(id: track.id, title: track.name, artist: track.artists[0].name, danceability: features.danceability, energy: features.energy, tempo: features.tempo, imgUrl: track.album.images[0].url, popularity: track.popularity)
+                let song = Song(id: track.id, title: track.name, artist: track.artists[0].name, danceability: features.danceability, energy: features.energy, tempo: features.tempo, imgUrl: track.album.images[0].url, popularity: track.popularity, previewURL: track.preview_url)
                 recList.append(song)
             }
         }
