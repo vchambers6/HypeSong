@@ -11,7 +11,7 @@ import SQLite
 
 class ViewController: UIViewController {
 
-    @IBOutlet var GoButton: UIButton!
+    @IBOutlet var GoButton: LoadingButton!
     @IBOutlet var Slider: UISlider!
     var filterParameters = FilterParameters(hypeLvl: 3, energy: (min: 0.4, max: 0.6, target: 0.5), danceability: (min: 0.4, max: 0.6, target: 0.5), tempo: (min: 75, max: 150, target: 100))
     
@@ -51,7 +51,9 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func goButtonTapped(_ sender: UIButton) {
+    @IBAction func goButtonTapped(_ sender: LoadingButton) {
+        
+        GoButton.showLoading()
         
         // empties favoritedTracks dictionary to prepare for new results
         favoritedTracks.favoritesList.removeAll()
@@ -65,7 +67,16 @@ class ViewController: UIViewController {
                                   //vc.index = indexPath.row
                                   //vc.total_pics = pictures.count
                        vc.tracks = data
+                    if let genre = self.selectedGenre?.title {
+                        vc.title = "Results for: \(genre) Hype Level \(self.filterParameters.hypeLvl)"
+                    }
+                    else {
+                        vc.title = "Results for: Hype Level \(self.filterParameters.hypeLvl)"
+                    }
+                    
                 self.navigationController?.pushViewController(vc, animated: true)
+                
+                    self.GoButton.hideLoading()
                 }
             }
             
