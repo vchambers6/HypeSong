@@ -19,7 +19,6 @@ class SongListViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Results"
         
         print("Number of tracks in table: \(tracks?.count)")
 
@@ -38,7 +37,7 @@ class SongListViewController: UITableViewController {
         let danceability = data.danceability
         let tempo = data.tempo
         let energy = data.energy
-        cell.trackDetails.text = "Song Details: \nDanceability: \(danceability) \nTempo: \(tempo) \nEnergy: \(energy)"
+
         let heart = UIImage(systemName: "suit.heart")
                    let filledHeart = UIImage(systemName: "suit.heart.fill")
         cell.favButton?.setImage(heart, for: .normal)
