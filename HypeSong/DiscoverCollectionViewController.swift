@@ -8,21 +8,29 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
+private let reuseIdentifier = "DiscoverCell"
 
 class DiscoverCollectionViewController: UICollectionViewController {
-
+    
+    var playlists = DiscoverPlaylist.fetchPlaylists()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        title = "Discover"
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+//        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         // Do any additional setup after loading the view.
     }
+    
+    
+    
 
     /*
     // MARK: - Navigation
@@ -38,21 +46,40 @@ class DiscoverCollectionViewController: UICollectionViewController {
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 0
+        print("Num playlists in discover: \(playlists.count)")
+        return playlists.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? DiscoverCell else {
+            fatalError("Unable to deque cell")
+        }
     
         // Configure the cell
-    
+        // Rounding corners of cell
+        cell.contentView.layer.cornerRadius = 5.0
+        cell.contentView.layer.borderWidth = 1.0
+        cell.contentView.layer.borderColor = UIColor.clear.cgColor
+        cell.contentView.layer.masksToBounds = true
+        
+        cell.title.text = playlists[indexPath.item].title
+        cell.title.textColor = UIColor.white
         return cell
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let vc = self.storyboard?.instantiateViewController(withIdentifier: "SongList") as? SongListViewController {
+            vc.tracks = playlists[indexPath.item].tracks
+            vc.title = playlists[indexPath.item].title
+            
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
 
     // MARK: UICollectionViewDelegate
@@ -86,4 +113,8 @@ class DiscoverCollectionViewController: UICollectionViewController {
     }
     */
 
+}
+
+class DiscoverCell: UICollectionViewCell {
+    @IBOutlet var title: UILabel!
 }
