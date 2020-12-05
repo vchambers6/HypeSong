@@ -24,7 +24,7 @@ class GenreCollectionViewCell: UICollectionViewCell {
            self.backgroundView = nil
 
            let blueView = UIView(frame: bounds)
-           blueView.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 1, alpha: 1)
+        blueView.backgroundColor = UIColor.lightGray.withAlphaComponent(0.5)
            self.selectedBackgroundView = blueView
        }
     
