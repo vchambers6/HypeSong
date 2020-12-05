@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3D0068E82574E2A700E93963 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D0068E72574E2A700E93963 /* AVFoundation.framework */; };
+		3D0732452579CBD300008B7D /* LoadingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0732442579CBD200008B7D /* LoadingButton.swift */; };
 		3D5C6232256AE08B00DEB79F /* SongDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5C6231256AE08A00DEB79F /* SongDetailViewController.swift */; };
 		3D5C6234256AE61900DEB79F /* SpotifyPlaylist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5C6233256AE61900DEB79F /* SpotifyPlaylist.swift */; };
 		3D5C6240256B0EAA00DEB79F /* TrackDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5C623F256B0EAA00DEB79F /* TrackDetails.swift */; };
@@ -31,6 +32,8 @@
 		3D9068B82568C60E005DF8BE /* GenreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9068B72568C60E005DF8BE /* GenreCollectionViewCell.swift */; };
 		3D9068BA2568CEC0005DF8BE /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9068B92568CEC0005DF8BE /* FavoritesTableViewController.swift */; };
 		3DBC197C256CD9AD001973EC /* BackupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBC197B256CD9AD001973EC /* BackupViewController.swift */; };
+		3DCF702A257774F400AD63B6 /* DiscoverCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCF7029257774F400AD63B6 /* DiscoverCollectionViewController.swift */; };
+		3DCF70342577887C00AD63B6 /* DiscoverPlaylist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCF70332577887C00AD63B6 /* DiscoverPlaylist.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -48,6 +51,7 @@
 
 /* Begin PBXFileReference section */
 		3D0068E72574E2A700E93963 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		3D0732442579CBD200008B7D /* LoadingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingButton.swift; sourceTree = "<group>"; };
 		3D5C6231256AE08A00DEB79F /* SongDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongDetailViewController.swift; sourceTree = "<group>"; };
 		3D5C6233256AE61900DEB79F /* SpotifyPlaylist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyPlaylist.swift; sourceTree = "<group>"; };
 		3D5C623F256B0EAA00DEB79F /* TrackDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDetails.swift; sourceTree = "<group>"; };
@@ -72,6 +76,8 @@
 		3D9068B72568C60E005DF8BE /* GenreCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenreCollectionViewCell.swift; sourceTree = "<group>"; };
 		3D9068B92568CEC0005DF8BE /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewController.swift; sourceTree = "<group>"; };
 		3DBC197B256CD9AD001973EC /* BackupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupViewController.swift; sourceTree = "<group>"; };
+		3DCF7029257774F400AD63B6 /* DiscoverCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverCollectionViewController.swift; sourceTree = "<group>"; };
+		3DCF70332577887C00AD63B6 /* DiscoverPlaylist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverPlaylist.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +124,7 @@
 				3D855155255F3155003E521C /* AppDelegate.swift */,
 				3D855157255F3155003E521C /* SceneDelegate.swift */,
 				3D855159255F3155003E521C /* ViewController.swift */,
+				3D0732442579CBD200008B7D /* LoadingButton.swift */,
 				3DBC197B256CD9AD001973EC /* BackupViewController.swift */,
 				3D833ED0256D999700C51628 /* Backup.swift */,
 				3D833ED2256E182B00C51628 /* FavoritedTracks.swift */,
@@ -134,6 +141,8 @@
 				3D9068B32568BCEF005DF8BE /* TrackCell.swift */,
 				3D833ECE256CEC7B00C51628 /* Song.swift */,
 				3D9068B92568CEC0005DF8BE /* FavoritesTableViewController.swift */,
+				3DCF70332577887C00AD63B6 /* DiscoverPlaylist.swift */,
+				3DCF7029257774F400AD63B6 /* DiscoverCollectionViewController.swift */,
 				3D85515B255F3155003E521C /* Main.storyboard */,
 				3D85515E255F315C003E521C /* Assets.xcassets */,
 				3D855160255F315C003E521C /* LaunchScreen.storyboard */,
@@ -225,7 +234,9 @@
 				3D855156255F3155003E521C /* AppDelegate.swift in Sources */,
 				3D9068BA2568CEC0005DF8BE /* FavoritesTableViewController.swift in Sources */,
 				3D9068B42568BCEF005DF8BE /* TrackCell.swift in Sources */,
+				3DCF70342577887C00AD63B6 /* DiscoverPlaylist.swift in Sources */,
 				3D855158255F3155003E521C /* SceneDelegate.swift in Sources */,
+				3D0732452579CBD300008B7D /* LoadingButton.swift in Sources */,
 				3D5C6232256AE08B00DEB79F /* SongDetailViewController.swift in Sources */,
 				3DBC197C256CD9AD001973EC /* BackupViewController.swift in Sources */,
 				3D5C6240256B0EAA00DEB79F /* TrackDetails.swift in Sources */,
@@ -240,6 +251,7 @@
 				3D833ED1256D999700C51628 /* Backup.swift in Sources */,
 				3D85517025610BA9003E521C /* Genre.swift in Sources */,
 				3D6C4403256AB41000E54A28 /* DBManager.swift in Sources */,
+				3DCF702A257774F400AD63B6 /* DiscoverCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,7 +327,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -369,7 +381,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
