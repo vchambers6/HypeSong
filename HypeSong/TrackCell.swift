@@ -13,7 +13,7 @@ class TrackCell: UITableViewCell {
     @IBOutlet var trackImage: UIImageView!
     @IBOutlet var trackTitle: UILabel!
     @IBOutlet var artistName: UILabel!
-    @IBOutlet var trackDetails: UILabel!
+    @IBOutlet var trackDetails: UILabel?
     @IBOutlet var favButton: UIButton?
     
     var track: Song! {
@@ -91,7 +91,7 @@ class TrackCell: UITableViewCell {
             let danceability = track.danceability
             let tempo = track.tempo
             let energy = track.energy
-            trackDetails.text = "Song Details: \nDanceability: \(danceability) \nTempo: \(tempo) \nEnergy: \(energy)"
+            trackDetails?.text = "Song Details: \nDanceability: \(danceability) \nTempo: \(tempo) \nEnergy: \(energy)"
             let heart = UIImage(systemName: "suit.heart")
             let filledHeart = UIImage(systemName: "suit.heart.fill")
             favButton?.setImage(heart, for: .normal)
@@ -103,7 +103,7 @@ class TrackCell: UITableViewCell {
             trackImage.image = nil
             trackTitle.text = nil
             artistName.text = nil
-            trackDetails.text = "hiii"
+            trackDetails?.text = "hiii"
         }
         
         
