@@ -9,10 +9,6 @@
 import UIKit
 
 class FavoritesTableViewController: SongListViewController {
-    
-        
-//        Track(id: "1", image: UIImage(named: "hiphop")!, title: "Sicko Mode", artist: "Travis Scott", danceability: 0.9, energy: 0.6, tempo: 153, imgUrl: "222", popularity: 20)]
-    //            Track(id: "2", image: UIImage(named: "hiphop")!, title: "More", artist: "K/DA", danceability: 0.9, energy: 0.6, tempo: 153, imgUrl: "222", popularity: 20)
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -36,7 +32,7 @@ class FavoritesTableViewController: SongListViewController {
     func fetchData() {
         self.tracks = DBFavorites.favorites
         tableView.reloadData()
-        print("\nNumber of tracks in db: \(tracks?.count)")
+        print("\nNumber of tracks in db: \(String(describing: tracks?.count))")
     }
 
     // MARK: - Table view data source
@@ -52,11 +48,7 @@ class FavoritesTableViewController: SongListViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // remember, we created a tableview with identifier picture in storyboard
-        // this lets you dequeue a recycled cell in the container so that you don't have to keep creating cells and instead reuse cells
         let cell = tableView.dequeueReusableCell(withIdentifier: "Track", for: indexPath) as? TrackCell
-        // gives the cell text label the same label as the picture. textLabel is an optional.
-        
         let track = tracks?[indexPath.row]
         
         cell?.track = track
@@ -98,50 +90,6 @@ class FavoritesTableViewController: SongListViewController {
         }
         
     }
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
-    }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
 
     /*
     // MARK: - Navigation
