@@ -36,9 +36,6 @@ class Song {
         } else {
             self.image = UIImage(named: "hiphop")!
         }//make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
-        
-        
-        
     }
     
     
