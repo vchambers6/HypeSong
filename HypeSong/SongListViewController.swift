@@ -20,13 +20,13 @@ class SongListViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("Number of tracks in table: \(tracks?.count)")
+        print("Number of tracks in table: \(String(describing: tracks?.count))")
 
         // Do any additional setup after loading the view.
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("Number of tracks \(tracks?.count)")
+        print("Number of tracks \(String(describing: tracks?.count))")
         return tracks?.count ?? 0
     }
     
@@ -34,9 +34,6 @@ class SongListViewController: UITableViewController {
         cell.trackImage.image = data.image
         cell.trackTitle.text = data.title
         cell.artistName.text = data.artist
-        let danceability = data.danceability
-        let tempo = data.tempo
-        let energy = data.energy
 
         let heart = UIImage(systemName: "suit.heart")
                    let filledHeart = UIImage(systemName: "suit.heart.fill")

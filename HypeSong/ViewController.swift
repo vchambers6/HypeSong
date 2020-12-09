@@ -26,10 +26,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         Database.initFavoritesDirectory()
         Database.createTable()
-    
-//        initUserDirectory()
-//        createTable()
-        //
+        
+        // Adding border to go button
+        GoButton.layer.borderWidth = 1
+        GoButton.layer.borderColor = UIColor.white.cgColor
+
     }
     
     @IBAction func hypeLevelChanged(_ sender: UISlider) {
@@ -136,33 +137,3 @@ extension ViewController: UICollectionViewDelegate {
            }
        }
 }
-
-//// Database Initialization
-//extension ViewController {
-//    func initUserDirectory() {
-//        do {
-//            let documentDirectory = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
-//            print("docuemtn directory: \(documentDirectory)")
-//            let fileUrl = documentDirectory.appendingPathComponent("users").appendingPathExtension("sqlite3")
-//
-//            let database = try Connection(fileUrl.path)
-//            self.database = database
-//        } catch {
-//            print(error)
-//        }
-//    }
-//
-//    func createTable() {
-//        let createTable = self.usersTable.create { (table) in
-//            table.column(self.id, primaryKey: true)
-//            table.column(self.favorites)
-//        }
-//        do {
-//            try self.database.run(createTable)
-//            print("Successfully created table")
-//        } catch {
-//            print("error")
-//        }
-//    }
-//
-//}

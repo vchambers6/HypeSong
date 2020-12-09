@@ -29,6 +29,8 @@ class SongDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        view.backgroundColor = UIColor.green
+//        trackImage.backgroundColor = UIColor.purple
         
         if let track = track{
             trackImage.image = track.image
@@ -61,9 +63,9 @@ class SongDetailViewController: UIViewController {
             artistLabel.text = "Artist"
             trackDetails.text = "Track Details"
         }
-        // Do any additional setup after loading the view.
     }
     
+    // triggers play() preview when play button is tapped
     @IBAction func playPreview(_ sender: UIButton) {
         if player.isPlaying {
             player.stop()
@@ -82,6 +84,7 @@ class SongDetailViewController: UIViewController {
         }
     }
     
+    // plays Audio preview URL if viable
     func play(url: URL) {
         do {
             player = try AVAudioPlayer(contentsOf: url)
