@@ -28,19 +28,11 @@ class GenreCollectionViewCell: UICollectionViewCell {
            self.selectedBackgroundView = blueView
        }
     
-//    @IBAction func genreButtonTapped(_ sender: UIButton) {
-//        print("genre tapped")
-//
-//    }
-    
      
     func updateUI() {
-        
         if let genre = genre {
             iconView.image = genre.featuredImage
             genreTitle.text = genre.title
-            //genreButton.addTarget(self, action: #selector(genreTapped), for: .touchUpInside)
-            //genreButton.isUserInteractionEnabled = true
             
         } else {
             iconView.image = nil
@@ -48,13 +40,8 @@ class GenreCollectionViewCell: UICollectionViewCell {
              print("genre not found")
         }
         
-    
     }
     
-//    func getInfo() {
-//        genreButton.addTarget(self, action: #selector(genreTapped), for: .touchUpInside)
-//    }
-//    
     @objc func genreTapped(_ sender: UIButton) {
           sender.backgroundColor = .systemGray
               print("genre tapped")
