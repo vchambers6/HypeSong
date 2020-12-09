@@ -51,26 +51,38 @@ class Genre {
                     4: Set(["2Th9BGKvfZG8bKQSACitwG", "5d1fRO6RYAtbPPgbpSHnlA"]),
                     5: Set(["0u695M7KyzXaPIjpEbxOkB", "71hbZpMopE0qWeJEac9TYS"])
                 ]),
+            Genre(title: "hip-hop", featuredImage: UIImage(named: "hiphop")!,
+              seedArtists: [
+                1: Set(["6YJ4EgQzDfJnIHRbqIHAdD", "2N79L5eT2Xraec4UJsi2Fz"]),
+                2: Set(["7tYKF4w9nC0nq9CsPZTHyP", "4IVAbR2w4JJNJDDRFP3E83"]),
+                3: Set(["4V8LLVI7PbaPR0K2TGSxFF", "6l3HvQ5sa6mXTsMTB19rO5"]),
+                4: Set(["007DWn799UWvfY1wwZeENR", "007DWn799UWvfY1wwZeENR"]),
+                5: Set(["0Y5tJX1MQlPlqiwlOH1tJY", "181bsRPaVXVlUKXrxwZfHK"])],
+              seedTracks: [
+                1: Set(["0wXuerDYiBnERgIpbb3JBR", "3yhlH8lhTpS03d91kuwjpf"]),
+                2: Set(["3ATo60fpicfxwZ0daRatlU", "3ATo60fpicfxwZ0daRatlU"]),
+                3: Set(["5NhlpQ6BOIz3S5welptk1W", "0H8XeaJunhvpBdBFIYi6Sh"]),
+                4: Set(["55CHeLEfn5iJ0IIkgaa4si", "60xaS8mYBKUW4VQQ666N0T"]),
+                5: Set(["6HZILIRieu8S0iqY8kIKhj", "03tqyYWC9Um2ZqU0ZN849H"])
+            ]),
             Genre(title: "k-pop", featuredImage: UIImage(named: "kpop")!,
                   seedArtists: [1: Set(["6dhfy4ByARPJdPtMyrUYJK", "7l8rOFwZFQ3G0sgZ7gjGng"]), 2: Set(["2FgZrgTMX6Sk0VNcOsEPmm", "6aLdhHUqgdKE86xbtNmY8g"]), 3: Set(["0siBQaURCli5wn2lqv8WZg", "5dCvSnVduaFleCnyy98JMo"]), 4: Set(["7n2Ycct7Beij7Dj7meI4X0", "3paGCCtX1Xr4Gx53mSeZuQ"]), 5: Set(["4gOc8TsQed9eqnqJct2c5v", "2dIgFjalVxs4ThymZ67YCE"])],
-                  seedTracks: [1: Set(["5jrF5VL5izwhJB9xgGR18l", "0D9AvynVM5S1cbNgOl06l8"]), 2: Set(["6z1kLsntE7FuzKZHZWrXYN", "3mKK73NhylzXdHV4qZGxI4"]), 3: Set(["1kqDfjZwReaIeiIU4BXFKy", "4kcX1pwQBQFpXhDc64MTPq"]), 4: Set(["5MwfxCtqMFGYp9Nc1BkTrS", "6FdShjf7nA2cqEnpv1tIia"]), 5: Set(["1M9qmt6EFa0RJJV8C7Y3HO", "60M8FSYZP8MA0Wy2huOADL"])]),
-//            Genre(title: "All", featuredImage: UIImage(named: "alternative")!, playlistIDs: ["37i9dQZF1DX82GYcclJ3Ug","37i9dQZF1DXcnkReojaCnV"]),
-//            Genre(title: "Alternative", featuredImage: UIImage(named: "alternative")!, playlistIDs: ["37i9dQZF1DX82GYcclJ3Ug",]),
-//            Genre(title: "Blues", featuredImage: UIImage(named: "blues")!, playlistIDs: ["37i9dQZF1DXcnkReojaCnV",]),
-//            Genre(title: "Classical", featuredImage: UIImage(named: "hiphop")!, playlistIDs: ["37i9dQZF1DWWEJlAGA9gs0",]),
-//            Genre(title: "Country", featuredImage: UIImage(named: "country")!, playlistIDs: ["37i9dQZF1DX1lVhptIYRda"]),
-//            Genre(title: "Electronic", featuredImage: UIImage(named: "electronic")!, playlistIDs: ["37i9dQZF1DX4dyzvuaRJ0n"]),
-//            Genre(title: "HipHop", featuredImage: UIImage(named: "hiphop")!, playlistIDs: ["37i9dQZF1DX0XUsuxWHRQd"]),
-//            Genre(title: "Jazz", featuredImage: UIImage(named: "jazz")!, playlistIDs: ["37i9dQZF1DX55dNU0PWnO5"]),
-//            Genre(title: "K-Pop", featuredImage: UIImage(named: "kpop")!, playlistIDs: ["37i9dQZF1DX9tPFwDMOaN1"]),
-//            Genre(title: "Latino", featuredImage: UIImage(named: "latino")!, playlistIDs: ["37i9dQZF1DX10zKzsJ2jva"]),
-//            Genre(title: "Metal", featuredImage: UIImage(named: "metal")!, playlistIDs: ["37i9dQZF1DWTcqUzwhNmKv"]),
-//            Genre(title: "Pop", featuredImage: UIImage(named: "pop")!, playlistIDs: ["37i9dQZF1DXcBWIGoYBM5M"]),
-//            Genre(title: "Reggae", featuredImage: UIImage(named: "reggae")!, playlistIDs: ["37i9dQZF1DXbSbnqxMTGx9"]),
-//            Genre(title: "Rock", featuredImage: UIImage(named: "reggae")!, playlistIDs: ["37i9dQZF1DWXRqgorJj26U"]),
-//            Genre(title: "R&B/Soul", featuredImage: UIImage(named: "rnb")!, playlistIDs: ["37i9dQZF1DX4SBhb3fqCJd", "37i9dQZF1DWULEW2RfoSCi"]),
-//            Genre(title: "Soundtrack", featuredImage: UIImage(named: "soundtrack")!, playlistIDs: ["37i9dQZF1DWVi45nh2EuPP"]),
-            
+                  seedTracks: [1: Set(["5jrF5VL5izwhJB9xgGR18l", "0D9AvynVM5S1cbNgOl06l8"]), 2: Set(["6z1kLsntE7FuzKZHZWrXYN", "3mKK73NhylzXdHV4qZGxI4"]), 3: Set(["1kqDfjZwReaIeiIU4BXFKy", "4kcX1pwQBQFpXhDc64MTPq"]), 4: Set(["5MwfxCtqMFGYp9Nc1BkTrS", "6FdShjf7nA2cqEnpv1tIia"]), 5: Set(["1M9qmt6EFa0RJJV8C7Y3HO", "60M8FSYZP8MA0Wy2huOADL"])
+            ]),
+            Genre(title: "pop", featuredImage: UIImage(named: "pop")!,
+              seedArtists: [
+                1: Set(["4phGZZrJZRo4ElhRtViYdl", "00FQb4jTyendYWaN8pK0wa"]),
+                2: Set(["3l0CmX0FuQjFxr8SK7Vqag", "3rWZHrfrsPBxVy692yAIxF"]),
+                3: Set(["5JZ7CnR6gTvEMKX4g70Amv", "3WGpXCj9YhhfX11TToZcXP"]),
+                4: Set(["66CXWjxzNUsdJxJ2JdwvnR", "6M2wZ9GZgrQXHCFfjv46we"]),
+                5: Set(["5cj0lLjcoR7YOSnhnX0Po5", "6LqNN22kT3074XbTVUrhzX"])],
+              seedTracks: [
+                1: Set(["41zXlQxzTi6cGAjpOXyLYH", "1XpYodsD36XN7ygcdF7mJJ"]),
+                2: Set(["6fxVffaTuwjgEk5h9QyRjy", "5Z3GHaZ6ec9bsiI5BenrbY"]),
+                3: Set(["6iYMfxznTBlcVOgRHab2W0", "3uc8AGNL0KbvISIrjnfRvN"]),
+                4: Set(["0rIAC4PXANcKmitJfoqmVm", "53nWoDpnflfBIUAfzhcZnD"]),
+                5: Set(["0QSQSRLBSYgB34WcEpicFP", "78qd8dvwea0Gosb6Fe6j3k"])
+            ]),
         ]
     }
 }
