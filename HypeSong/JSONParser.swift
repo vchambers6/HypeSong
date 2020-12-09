@@ -4,10 +4,6 @@
 import Foundation
 import UIKit
 
-//struct SpotifyPlaylist: Codable {
-//    var items: [PlaylistItem]
-//}
-//
 
 struct AccessToken: Codable {
     var access_token: String
@@ -48,21 +44,6 @@ struct AudioFeature: Codable {
     var tempo: Float
     var id: String
 }
-
-//struct Genre {
-//    var name: String
-//    var seedArtists: [Int: Set<String>]
-//    var seedTracks: [Int: Set<String>]
-//
-//    init(name: String, seedArtists: [Int:Set<String>], seedTracks: [Int: Set<String>]) {
-//        self.name = name
-//        self.seedArtists = seedArtists
-//        self.seedTracks = seedTracks
-//    }
-//}
-
-//            "https://api.spotify.com/v1/recommendations?market=US&seed_artists=" + seedArtists + "&seed_genres=" + seedGenres + "&seed_tracks=" +  seedTracks + "&min_danceability=" + filter.danceability.min + "&max_danceability=" + filter.danceability.max + "&target_danceability=" + filter.danceability.target + "&min_energy=" + filter.energy.min + "&max_energy=" + filter.energy.max + "&target_energy=" + filter.energy.target + "&min_tempo=" + filter.tempo.min + "&max_tempo=" + filter.tempo.max + "&target_tempo=" + filter.tempo.target
-
 
 class JSONParser {
     
@@ -119,15 +100,10 @@ class JSONParser {
                 do {
                       let json = try JSONDecoder().decode(AccessToken.self, from: data)
                     completion(json.access_token)
-                    //self.parse(genre: genre, filter: filter, token: json.access_token)
-                    
-//                    self.token = json.access_token
-//                    print("\nAcess Token: \(self.token)")
                   } catch {
                       print("Failed. \(error)")
                       return
                   }
-                //print(String(data: data, encoding: String.Encoding.utf8)!)
             }
             task.resume()
         }
@@ -246,12 +222,3 @@ extension String {
         return Data(self.utf8).base64EncodedString()
     }
 }
-
-//let kpop = Genre(name: "k-pop",
-//                 seedArtists: [5: Set(["4gOc8TsQed9eqnqJct2c5v", "2dIgFjalVxs4ThymZ67YCE"])],
-//                 seedTracks: [5: Set(["1M9qmt6EFa0RJJV8C7Y3HO", "60M8FSYZP8MA0Wy2huOADL"])])
-//
-//let parser = JSONParser()
-//let filter = FilterParameters(hypeLvl: 5, energy: (min: 0.8, max: 1.0, target: 0.9), danceability: (min: 0.8, max: 1.0, target: 0.9), tempo: (min: 100, max: 20000, target: 170))
-//parser.parse(genre: kpop, filter: filter)
-//: [Next](@next)
