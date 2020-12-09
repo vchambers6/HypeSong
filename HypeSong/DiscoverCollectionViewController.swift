@@ -64,12 +64,10 @@ class DiscoverCollectionViewController: UICollectionViewController {
         // Configure the cell
         // Rounding corners of cell
         cell.contentView.layer.cornerRadius = 5.0
-        cell.contentView.layer.borderWidth = 1.0
-        cell.contentView.layer.borderColor = UIColor.clear.cgColor
+        cell.contentView.layer.borderWidth = 1
+        cell.contentView.layer.borderColor = UIColor(red: 217/255.0, green: 82/255.0, blue: 131/255.0, alpha: 1).cgColor
         cell.contentView.layer.masksToBounds = true
-        
         cell.title.text = playlists[indexPath.item].title
-        cell.title.textColor = UIColor.white
         return cell
     }
     
